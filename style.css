@@ -1,0 +1,975 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.body{
+    background-image: url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJQBCQMBIgACEQEDEQH/xAAbAAADAQEBAQEAAAAAAAAAAAABAgMABAUGB//EADMQAAICAQMBBgQFAwUAAAAAAAABAhEDBBIhMQUTIkFRYTKBkaEGQrHR8BRScSNTYsHx/8QAGAEBAQEBAQAAAAAAAAAAAAAAAQACAwT/xAAhEQEBAQEBAAEDBQAAAAAAAAAAARECEgMEITETIjJBUf/aAAwDAQACEQMRAD8A/IAmCjoyKCZBQpgmQUjSZDJGQyRKgkOkZIKEMkFIKQ6QgtDJDJDUOIm0NFNptpYE6NRXajbRxJNCtFXEFBhSoWizQrRVI0CijQrMkjQtFGhGSI0AZoWgICsZgJFAMwPoZRQBMCYZIAUKFDICCSYYFDJGlRSGSAkOhDJDJGQ6QhoodIyQ8UOBlEZRGUR4xNSLSKI2wqojbfY1gQ2G2l9htg4nO4i7TocBHEMSDQjReURGjNh1BoRou0TaM2JJoVoo0K0ZKdCtFGhGgJGAZilSArQzAZRWgDPoAkwUZIKJCgmQUaQoZICGRAUh0gIZDEaKHSBFDxRqCjFFYxBFFYRNyAYxKRiGMeS0YG5GaWMB1ArGBRQNzlnXPs9gOHsdfd+wO7HytccoE5RO2UCMoGfJ1ySRKUTqnEjNGLDrnaJyReSJSRitIyQj6lWTaMUwjEaHYrAkaFaGYrA6ArGAwRWALACEYVBRIRkBBGIyGQqHRoGQ8RUPEYDopESJSBqBWKKqoq3/AOk40lb4rzOLTaxartOKTrBjT2/8p0atxfl7EInTjiTguToxo78xi08Ilo4w4onRGB255c7UViA8Z1qArgb8rXDOBzzid+SPHseXrO0dDpr73PC/7Yu39Ece8n5am0k4kJo4s34h09y7jFkkl1cuKODU9oa/JNbEsWOXRqH7nm7+Tl0nNerkqKt9PU48uqwQvx7uaqPJyYce6c5Z55NRLpt8r9SmPSxWSPkl0Ry9W/hrHS+l+qsRlX5L0JSHEmxWOxGZJGKxmKwRWALAwIMFBYATIKAgokZDIVDIYjIdCIZGgdDxEQ8RgViUiSiVj5GoK4+1tUoKGntrvPjceqRydlQxw1/c5ZtQmrjK65ObXf6uoyZI/wB1fQ5l3mR2rbX1OHXX7tbz7PvsENqq79L8jsxxPjdD2zrNPjazSjOMVS3rlccHRL8Raz/U7p6bbGqag3br3Z6+fqOHK8V9riV9DZNbpNO6zZ8cZP8ALdv6H55PtrtDPkXf5pzh/trwxr5EXn/p8zz4k05JqpS5i17mr9ZJ/GL9L/X3Go/FWgx4ZTwQyZ9vWkor7+R4ev8AxZrcmR49I8GKG1PfGLm7q65/Y4f6JajDLuMcZScXKSl0i36MXH2ZLBp/FkvJkntcEk1w3/2c+/m+XpqccxzPtTX6zKlqJ5M7bSUbpf4pC6bAv6mpLu3Xldxf1PS0606jeLGoKVKUdzdfX6lI6brucMjjG5Srdufs/mcfNt2tK4dFpsWRZElKTd7pfE2cuvlPJmaVtPn34PQyQUlthXLpbf59/Uk9OlNwdNuHL5T9zpZ/UGufHBJpqtvt1L003wq+4rhOMt1p/wCfId8eTXtZSYiMnIpInIqImxGOxGYaIxWMxWCKALAFIMAQAmCgIKJCMhRkMRkOhEMjQUQ0WIh4kFYlYuiMWUizcDwdRjlg1GWLha3WtxJZFjnuhSbX0PodRp8eoit6uS6NdUeTquzpY0u78SumnXBw64srcpe7jLTylGEeY+juzkjJwUoevTjqdmn0v5ck2lHrXmehp9Ljwy34aUk3FuSvn06ehTnTryMGmyZGrjW50pN1ydT7Pk3cHK1Kqcfv7HpRlClFRcouq3eh0LFcKjCbi+Hw6b9/1OnPxxm9D2TklhxRxzlPure1UuPX5eZu0M2PJtcJpuCqlFctvlfqNPDFcQ5hXO59b/i9hHhe57WnLdyo8W/U7feTGftuvP7ucGpKVV8Tb6u+vHU7scYx4hOfdp2+U6+fUWGOTk+ZY0m5J7uU7tobHLLjnsh0T8vPj7GJMWuiKcnttPrVSuvTkGRKWRJ06b4fkSi5Um034rUb4TKuXHL6nTQSSTk/pz1EkPLnz5JyM0kkSbKNkpGKStiMZiMySsVjNitgisAQMKQAFgBAmMugoxIyMBBNIyY6EQyEHTHRNDJkFosomRTHTNRLoTJFXSfMk+H0NGQzW+PuaDhypuVTarpXoaEY07alKvX3/Y6MkFw+a6XfmJco24+KnwufQxY0VSi6v4nae11JfP6FsWZb4pOk+fD6+TQjtKprd1sSSSybL4bUrvgk7sUlljTpLbaW3+fYtGbhVe26K5OCElsdxcrfNq0r+1F41FRTUrT+n8Z0nTNizaUZXUmlVrqzTi0ntacmur87JPJJ/E7V88+Qzdrhv9vcQW+FtTUV8NPqwqdN2aavrLy8JNu3zRUmct3kycmFv6CyZlFkybGkxGZpBiMLYrMkrFYzEBMKwgAg2CwsAJgihJHQUKhkaQoZCDIlToZCIZCDplEySGTLQsmPfDIpjpm0Mqp9SO3xNybpLmuBNRlcc0Ibq3K0kupJZ5rTzmpJtcKjF6hx1JJXJrw9PS0HaqdyXnTSo45Zp7YOLSbjb+YcmbJhjFzpx28uP6F6ix2ccNu19a9QJ5FafwtUgRUu7fe05eddDjxZ8+TF31pKPXyG0O55XSqfi6Uk+TRk78aSt002cb1W+WKOGKcpJOvQbHll3qx5UoyfNuuWHo47N9zd3x9hnLm+Th1OaWJY3CluddL/AEF354ZlB7d3WKX5h9jHaxWwN8L1FbHUzYjYWK2ZQMVhYrAgxWHyAVIAMB9DKZ9AAZiTBQoUCMmMhEMhRjIARRkMmhEMIOmMmTTGQpRMZMmmMmOhCUcuTVxk4bccU1drnqReHOseTDHGvE1U00kdyCmHmU65M+DJsjj7mOWKgknuVpgyaXMtHjxxe6albW47k65XUyfqXiLTper+Z5mLDqo6eeF4k9/m5qkejZrG86NcGXSZMOSOXT02lTi+EymHFlyahZc0FGMeiu2zqsDfoHiHXPr8U8kId0rlF31oWeKb12PKo+BJ20/Y6WxbLIBFM2K2SZsVmbBYEBWwt0KSYBgMCwGzWKCYxgAmCYxIUMjGFCExiQmRjGlTLqMzGIMMjGFGCjGICYxjSExjEgMYwVFYDGBFYpjEgAwmAkMYxUgBmMZRQBMSABjAn//Z");
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: rgb(35, 89, 170);
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: aliceblue;
+    width: 80%;
+    margin-inline: auto;
+    margin-top: 40px;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-weight: bolder;
+    font-size: larger;
+
+}
+
+.list{
+    list-style: none;
+    display: flex;
+    justify-content: left;
+}
+
+a{
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.bg{
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARMAAAC3CAMAAAAGjUrGAAAAdVBMVEUAAAD////8/Pzo6OiOjo719fW1tbXh4eHw8PDZ2dnAwMBAQECkpKRhYWHNzc0SEhJ/f39QUFBubm6dnZ1HR0dzc3MfHx96enqpqakuLi49PT2ysrIpKSnR0dGKiopeXl6VlZULCwtVVVU2NjYqKiq9vb0aGhrIjwgtAAADzElEQVR4nO3a6WKqMBAF4IYdxBXErVprb33/R7xWwRIIECAkwZ7vf5kwheEYeHsDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFDmQ/UCOO3iT1mlttIq9TBfHcKptGqHhbRSXV1C1wvf5dU7e/JqdTGxZgbx1zJLrslKZrl2kkVgE0KcL6lVL8SVWo/fdX0wb/0gpiW58J6QjeSSXKZbl9zN5M3V1NwjtuyajZaRbzwaYsicq5nbxRnJr1rj62egplwlz8PjrXKiojDTbvHtkadgqWQRh1tpX0nlks/VY6CmvOiqZh2nn+o65LWP0CV5vrJ0ML3XVx3r4+hI9YMYB7lhJO/ffZYpvXX2p5lNN4SYJ5ULety+yp46101+oKZman+gB49VXJQUpwdqyt4qfgRa6c07l175EvrlfqgKI3nL7PaVWzY+Hw1WQ1SFEUo22mbySr6XB2p200Tyr9ayIFvOQU69hDVQU+rCCGXzXJCEx878+ROXwXAmw6+AR/J7Tw+9NXF5/sRlkb4zUi0XHIdMSPvzsbodRHkYoWxy6xrqH7V77BlWs7cKdkaq5S/mcIDjJ2uHkcgo6sMIzckv7lv00esGakaHMEKJ6X+YyEMvI2ZCpXl67evd0csWlu0nVlUio8h9TcNpVVikiMB0G6iViYyiSxgpKE6/3uF+7fD1Q6cwQiteJoT0eSTyDNSs99Jf03Arn0PQ8UjL2oRKs7c7oWch1AdjwR12lfZ8AzWlWxgpmLH+ie0OkTQl1ALtwkjBjrlq/m3qK3PPsIay1zT8IvbK+ZrSYqBmx9VjZ6Re1T/ZbBqBpZcwHJy9lHPqKa4+gXP1X+XfanPTNowUhTUnYUesayU+cSZUmsZhpKhhHrjb9W/2nqwsx2/1gMkYOoeREq4z8kzT7NSLB83DSFE51wunexgpqRsnIniRPp/38GKFWHG03Blp1OUJwkvyB6zCDNaQ0YSRkvlAHRlRGCn5GqIh4wojJRPxHRlZGCnbi+5IoOYbJ5ESoQ2xRxhGGAR2ZJxhhKHdFlk1bb4ZESBoPl0OpqX6K2ORTgI6MuYwwnLt2xBDr29GhGi/p5o3+jDCNO3RkRcII2wcn4cw6fEB6zC6xfuXCSNs59YNMZxY9aKH1nKvzRvtzkgbbUZKoNEHrIPivVJcS/vX3+JUvEinmOHr/KThsmz4MWiGLz9WGRaVXbFnp1FvJvZxYXytaAbWX7xA8nabMPBdz/ZM9/gdLeLXjaoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMDr/AabzJ5d0HqS1AAAAAElFTkSuQmCC");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+div{
+    width: fit-content;
+    border-radius: 10px;
+    width: 300px;
+    margin: auto;
+    margin-top: 100px;
+    padding: 20px;
+    background-color: aliceblue;
+    float: left;
+    gap: 40px;
+    margin-left: 20px;
+}
+
+img{
+    height: 300px;
+    width: 300px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.top{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: large;
+    font-weight: bold;
+}
+
+button {
+    padding: 5px 10px;
+    font-size: large;
+    border-radius: 20px;
+    width: 150px;
+    background-color: black;
+    color: aliceblue;
+}
+
+.bottom{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.brand{
+    color: gray;
+}
+
+.price{
+    font-size: large;
+    font-weight: bold;
+}
+
+span{
+    display: flex;
+    gap: 20px;
+    margin-block: 10px;
+}
+
+span > span {
+     height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 2px solid rgb(65, 58, 58);
+}
+
+.blue{
+    background-color: rgb(23, 113, 231);
+}
+
+.purple{
+    background-color: rgb(199, 107, 199);
+}
+
+.black{
+    background-color: black;
+}
+
+.pink{
+    background-color: palevioletred;
+}
+
+
+.div2{
+    width: fit-content;
+    border-radius: 10px;
+    width: 300px;
+    margin: auto;
+    margin-top: 100px;
+    padding: 20px;
+    background-color: aliceblue;
+    float: left;
+    gap: 40px;
+    margin-left: 20px;
+}
+
+img{
+    height: 300px;
+    width: 300px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.top{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: large;
+    font-weight: bold;
+}
+
+button {
+    padding: 5px 10px;
+    font-size: large;
+    border-radius: 20px;
+    width: 150px;
+    background-color: black;
+    color: aliceblue;
+}
+
+.bottom{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.brand{
+    color: gray;
+}
+
+.price{
+    font-size: large;
+    font-weight: bold;
+}
+
+span{
+    display: flex;
+    gap: 20px;
+    margin-block: 10px;
+}
+
+span > span {
+     height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 2px solid rgb(65, 58, 58);
+}
+
+.blue{
+    background-color: rgb(23, 113, 231);
+}
+
+.purple{
+    background-color: rgb(199, 107, 199);
+}
+
+.black{
+    background-color: black;
+}
+
+.pink{
+    background-color: palevioletred;
+}
+
+
+.div3{
+    width: fit-content;
+    border-radius: 10px;
+    width: 300px;
+    margin: auto;
+    margin-top: 100px;
+    padding: 20px;
+    background-color: aliceblue;
+    float: left;
+    gap: 40px;
+    margin-left: 20px;
+}
+
+img{
+    height: 300px;
+    width: 300px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.top{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: large;
+    font-weight: bold;
+}
+
+button {
+    padding: 5px 10px;
+    font-size: large;
+    border-radius: 20px;
+    width: 150px;
+    background-color: black;
+    color: aliceblue;
+}
+
+.bottom{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.brand{
+    color: gray;
+}
+
+.price{
+    font-size: large;
+    font-weight: bold;
+}
+
+span{
+    display: flex;
+    gap: 20px;
+    margin-block: 10px;
+}
+
+span > span {
+     height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 2px solid rgb(65, 58, 58);
+}
+
+.blue{
+    background-color: rgb(23, 113, 231);
+}
+
+.purple{
+    background-color: rgb(199, 107, 199);
+}
+
+.black{
+    background-color: black;
+}
+
+.pink{
+    background-color: palevioletred;
+}
+
+
+.div4{
+    width: fit-content;
+    border-radius: 10px;
+    width: 300px;
+    margin: auto;
+    margin-top: 100px;
+    padding: 20px;
+    background-color: aliceblue;
+    float: left;
+    gap: 40px;
+    margin-left: 20px;
+}
+
+img{
+    height: 300px;
+    width: 300px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.top{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: large;
+    font-weight: bold;
+}
+
+button {
+    padding: 5px 10px;
+    font-size: large;
+    border-radius: 20px;
+    width: 150px;
+    background-color: black;
+    color: aliceblue;
+}
+
+.bottom{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.brand{
+    color: gray;
+}
+
+.price{
+    font-size: large;
+    font-weight: bold;
+}
+
+span{
+    display: flex;
+    gap: 20px;
+    margin-block: 10px;
+}
+
+span > span {
+     height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 2px solid rgb(65, 58, 58);
+}
+
+.blue{
+    background-color: rgb(23, 113, 231);
+}
+
+.purple{
+    background-color: rgb(199, 107, 199);
+}
+
+.black{
+    background-color: black;
+}
+
+.pink{
+    background-color: palevioletred;
+}
+
+
+.div5{
+    width: fit-content;
+    border-radius: 10px;
+    width: 300px;
+    margin: auto;
+    margin-top: 100px;
+    padding: 20px;
+    background-color: aliceblue;
+    float: left;
+    gap: 40px;
+    margin-left: 20px;
+}
+
+img{
+    height: 300px;
+    width: 300px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.top{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: large;
+    font-weight: bold;
+}
+
+button {
+    padding: 5px 10px;
+    font-size: large;
+    border-radius: 20px;
+    width: 150px;
+    background-color: black;
+    color: aliceblue;
+}
+
+.bottom{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.brand{
+    color: gray;
+}
+
+.price{
+    font-size: large;
+    font-weight: bold;
+}
+
+span{
+    display: flex;
+    gap: 20px;
+    margin-block: 10px;
+}
+
+span > span {
+     height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 2px solid rgb(65, 58, 58);
+}
+
+.blue{
+    background-color: rgb(23, 113, 231);
+}
+
+.purple{
+    background-color: rgb(199, 107, 199);
+}
+
+.black{
+    background-color: black;
+}
+
+.pink{
+    background-color: palevioletred;
+}
+
+
+.div6{
+    width: fit-content;
+    border-radius: 10px;
+    width: 300px;
+    margin: auto;
+    margin-top: 100px;
+    padding: 20px;
+    background-color: aliceblue;
+    float: left;
+    gap: 40px;
+    margin-left: 20px;
+}
+
+img{
+    height: 300px;
+    width: 300px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.top{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: large;
+    font-weight: bold;
+}
+
+button {
+    padding: 5px 10px;
+    font-size: large;
+    border-radius: 20px;
+    width: 150px;
+    background-color: black;
+    color: aliceblue;
+}
+
+.bottom{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.brand{
+    color: gray;
+}
+
+.price{
+    font-size: large;
+    font-weight: bold;
+}
+
+span{
+    display: flex;
+    gap: 20px;
+    margin-block: 10px;
+}
+
+span > span {
+     height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 2px solid rgb(65, 58, 58);
+}
+
+.blue{
+    background-color: rgb(23, 113, 231);
+}
+
+.purple{
+    background-color: rgb(199, 107, 199);
+}
+
+.black{
+    background-color: black;
+}
+
+.pink{
+    background-color: palevioletred;
+}
+
+
+.div7{
+    width: fit-content;
+    border-radius: 10px;
+    width: 300px;
+    margin: auto;
+    margin-top: 100px;
+    padding: 20px;
+    background-color: aliceblue;
+    float: left;
+    gap: 40px;
+    margin-left: 20px;
+}
+
+img{
+    height: 300px;
+    width: 300px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.top{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: large;
+    font-weight: bold;
+}
+
+button {
+    padding: 5px 10px;
+    font-size: large;
+    border-radius: 20px;
+    width: 150px;
+    background-color: black;
+    color: aliceblue;
+}
+
+.bottom{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.brand{
+    color: gray;
+}
+
+.price{
+    font-size: large;
+    font-weight: bold;
+}
+
+span{
+    display: flex;
+    gap: 20px;
+    margin-block: 10px;
+}
+
+span > span {
+     height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 2px solid rgb(65, 58, 58);
+}
+
+.blue{
+    background-color: rgb(23, 113, 231);
+}
+
+.purple{
+    background-color: rgb(199, 107, 199);
+}
+
+.black{
+    background-color: black;
+}
+
+.pink{
+    background-color: palevioletred;
+}
+
+
+.div8{
+    width: fit-content;
+    border-radius: 10px;
+    width: 300px;
+    margin: auto;
+    margin-top: 100px;
+    padding: 20px;
+    background-color: aliceblue;
+    float: left;
+    gap: 40px;
+    margin-left: 20px;
+}
+
+img{
+    height: 300px;
+    width: 300px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.top{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: large;
+    font-weight: bold;
+}
+
+button {
+    padding: 5px 10px;
+    font-size: large;
+    border-radius: 20px;
+    width: 150px;
+    background-color: black;
+    color: aliceblue;
+}
+
+.bottom{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.brand{
+    color: gray;
+}
+
+.price{
+    font-size: large;
+    font-weight: bold;
+}
+
+span{
+    display: flex;
+    gap: 20px;
+    margin-block: 10px;
+}
+
+span > span {
+     height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 2px solid rgb(65, 58, 58);
+}
+
+.blue{
+    background-color: rgb(23, 113, 231);
+}
+
+.purple{
+    background-color: rgb(199, 107, 199);
+}
+
+.black{
+    background-color: black;
+}
+
+.pink{
+    background-color: palevioletred;
+}
+
+
+.div9{
+    width: fit-content;
+    border-radius: 10px;
+    width: 300px;
+    margin: auto;
+    margin-top: 100px;
+    padding: 20px;
+    background-color: aliceblue;
+    float: left;
+    gap: 40px;
+    margin-left: 20px;
+}
+
+img{
+    height: 300px;
+    width: 300px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.top{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: large;
+    font-weight: bold;
+}
+
+button {
+    padding: 5px 10px;
+    font-size: large;
+    border-radius: 20px;
+    width: 150px;
+    background-color: black;
+    color: aliceblue;
+}
+
+.bottom{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.brand{
+    color: gray;
+}
+
+.price{
+    font-size: large;
+    font-weight: bold;
+}
+
+span{
+    display: flex;
+    gap: 20px;
+    margin-block: 10px;
+}
+
+span > span {
+     height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 2px solid rgb(65, 58, 58);
+}
+
+.blue{
+    background-color: rgb(23, 113, 231);
+}
+
+.purple{
+    background-color: rgb(199, 107, 199);
+}
+
+.black{
+    background-color: black;
+}
+
+.pink{
+    background-color: palevioletred;
+}
+
+
+.div10{
+    width: fit-content;
+    border-radius: 10px;
+    width: 300px;
+    margin: auto;
+    margin-top: 100px;
+    padding: 20px;
+    background-color: aliceblue;
+    float: left;
+    gap: 40px;
+    margin-left: 20px;
+}
+
+img{
+    height: 300px;
+    width: 300px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.top{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: large;
+    font-weight: bold;
+}
+
+button {
+    padding: 5px 10px;
+    font-size: large;
+    border-radius: 20px;
+    width: 150px;
+    background-color: black;
+    color: aliceblue;
+}
+
+.bottom{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.brand{
+    color: gray;
+}
+
+.price{
+    font-size: large;
+    font-weight: bold;
+}
+
+span{
+    display: flex;
+    gap: 20px;
+    margin-block: 10px;
+}
+
+span > span {
+     height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 2px solid rgb(65, 58, 58);
+}
+
+.blue{
+    background-color: rgb(23, 113, 231);
+}
+
+.purple{
+    background-color: rgb(199, 107, 199);
+}
+
+.black{
+    background-color: black;
+}
+
+.pink{
+    background-color: palevioletred;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.Log-in {
+    background-image: url(" https://static.vecteezy.com/system/resources/thumbnails/005/152/375/small/modern-futuristic-neon-purple-background-free-vector.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: fit-content;
+    background-color: rgba(92, 7, 92, 0.247);
+    margin-inline: auto;
+    margin-top: 100px;
+    padding: 40px;
+}
+
+.main>h1{
+    color: aliceblue;
+    margin-bottom: 20px;
+    margin-inline: auto;
+}
+
+input{
+    background-color: inherit;
+    border: none;
+    width: 100%;
+    color: aliceblue;
+}
+
+.form-span{
+    display: flex;
+    border: 2px solid white;
+    border-radius: 20px;
+    padding: 5px 10px;
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+.icons{
+    height: 20px;
+    color: white;
+}
+
+.rem-div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.inner-rem{
+    display: flex;
+    height: 20px;
+    color: white;
+    gap: 10px;
+}
+
+.inner-rem > label {
+    width: fit-content;
+}
+
+button{
+    display: flex;
+    background-color: aliceblue;
+    padding: 15px;
+    border: none;
+    border-radius: 20px;
+    width: 350px;
+    justify-content: center;
+}
+
+.clr{
+    color: blue;
+}
+
+.clr:hover{
+    color: blueviolet;
+    font-size: large;
+}
+
+.reg-span{
+    display: flex;
+    color: aliceblue;
+    gap: 5px;
+    justify-content: center;
+}
+
+a{
+    text-decoration: none;
+    color: aliceblue;
+}
